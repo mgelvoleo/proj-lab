@@ -51,4 +51,10 @@ Vagrant.configure("2") do |config|
     end
 end
 ```
+Step 5: Start the vagrant that we create a script by using the command:
 
+```
+Shell command
+$ vagrant up
+
+```
