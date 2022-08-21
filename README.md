@@ -13,26 +13,26 @@ Vagrant.configure("2") do |config|
     servers=[
         {
           :hostname => "control",
-          :box => "bento/ubuntu-18.04",
-          :ip => "192.168.57.10",
+          :box => "bento/ubuntu-22.04",
+          :ip => "192.168.56.10",
           :ssh_port => '2200'
         },
         {
           :hostname => "node1",
-          :box => "bento/ubuntu-18.04",
-          :ip => "192.168.57.11",
+          :box => "bento/ubuntu-22.04",
+          :ip => "192.168.56.11",
           :ssh_port => '2201'
         },
         {
           :hostname => "node2",
-          :box => "bento/ubuntu-18.04",
-          :ip => "192.168.57.12",
+          :box => "bento/ubuntu-22.04",
+          :ip => "192.168.56.12",
           :ssh_port => '2202'
         },
         {
           :hostname => "node3",
-          :box => "bento/ubuntu-18.04",
-          :ip => "192.168.57.13",
+          :box => "bento/ubuntu-22.04",
+          :ip => "192.168.56.13",
           :ssh_port => '2203'
         }
       ]
@@ -56,5 +56,13 @@ Step 5: Start the vagrant that we create a script by using the command:
 ```
 Shell Command
 $ vagrant up
+
+```
+
+Step 6: Access the workstion name "Control" vm
+
+```
+Shell Command
+$ vagrant ssh control
 
 ```
