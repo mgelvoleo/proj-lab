@@ -73,6 +73,14 @@ Shell Command
 $ cd /vagrant
 
 ```
+Note: Option for us there will be no coding in your part ;)
+
+Step 7.1: Copy the host file given to the workstation
+```
+Shell Command
+$ sudo cp hosts /etc/hosts
+
+```
 
 Step 8: add a ip for each node and workstation for us to have a nameresolution
 
