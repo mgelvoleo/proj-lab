@@ -54,7 +54,7 @@ end
 Step 5: Start the vagrant that we create a script by using the command:
 
 ```
-Shell command
+Shell Command
 $ vagrant up
 
 ```
