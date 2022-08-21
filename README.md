@@ -123,4 +123,14 @@ Shell Command
 $ ssh-copy-id node1 && ssh-copy-id node2 && ssh-copy-id node3
 
 ``
+Step 13: Create a ansible inventory and playbook in /vagrant
 
+Note: Here are the link for the documentation of making basic inventory https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+
+```
+Shell Command
+
+$ touch inventory
+$ touch playbook.yml
+
+``
