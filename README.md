@@ -97,4 +97,30 @@ Step 9:  Add the following in the host file
 192.168.56.12 node2
 192.168.56.13 node3
 ```
+Step 10: Try to connect server using ssh
+```
+Shell Command
+
+$ ssh vagrant@node1
+
+``
+
+Step 11: Make a copy of ssh key to our servers, 
+In making a keygen in our workstation the procedure in allowing all with no passphrase
+
+```
+Shell Command
+
+$ ssh-keygen
+
+``
+
+Step 12: Copy the generate key to the server and test it ping using access e.g ssh vagrant@node1
+
+```
+Shell Command
+
+$ ssh-copy-id node1 && ssh-copy-id node2 && ssh-copy-id node3
+
+``
 
