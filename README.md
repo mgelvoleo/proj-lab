@@ -66,3 +66,27 @@ Shell Command
 $ vagrant ssh control
 
 ```
+
+Step 7: access the mount folder of vagrant
+```
+Shell Command
+$ cd /vagrant
+
+```
+
+Step 8: add a ip for each node and workstation for us to have a nameresolution
+
+```
+Shell Command
+$ sudo vim /etc/hosts
+
+```
+
+Step 9:  Add the following in the host file
+```
+192.168.56.10 control
+192.168.56.11 node1
+192.168.56.12 node2
+192.168.56.13 node3
+```
+
