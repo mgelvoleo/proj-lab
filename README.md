@@ -134,3 +134,94 @@ $ touch inventory
 $ touch playbook.yml
 
 ``
+Step 14: Dockerize sample python apps
+
+I have a separate tutorial in dockerize the python apps
+
+Step 15: Update the inventory in thru this belown
+```
+[control]
+control
+
+
+[nodes]
+node1
+node2
+node3
+
+
+
+[manager]
+node1
+
+[worker]
+node2
+node3
+
+```       
+Step 16: Clone or fork the ansible swarm playbook 
+
+```
+Shell Command
+
+$ git clone https://github.com/mgelvoleo/ansible-swarm-playbook
+
+```
+
+
+Step 17: Open the swarm.yml and replace in the playbook that has a eth0 to eth1
+
+Step 18: Run the playbook
+
+```
+Shell Command
+
+$ ansible-playbook -i inventory -K swarm.yml
+
+```
+
+Step 19: Access the each node with ssh and type the command to check if the swarm is working
+
+```
+Shell Command
+
+$  ssh node1
+$  docker node ls
+
+```
+
+Step 20: Pull the images from the dockerhub of the python apps to swarm Note: You should be in the properpery folder to execute the command
+
+```
+Shell Command
+
+$  docker stack deploy --compose-file docker-compose.yml myapp
+
+
+
+```
+
+
+Step 21: View the successfull deploy of images in the swarm
+```
+Shell Command
+
+$  docker stack ls
+$  docker stack services myapp
+```
+Step 22: Scale the services that we have by typing:
+```
+Shell Command
+$ docker service scale  myapp_helloworld=3
+$ docker service ps myapp_web
+```
+
+
+
+
+
+
+
+
+
+
