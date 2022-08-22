@@ -1,12 +1,12 @@
 # Project Provisioning 3 nodes
 
-## Step 1: Install the vagrant
+### Step 1: Install the vagrant
 
-## Step 2: Install the virtualbox
+### Step 2: Install the virtualbox
 
-## Step 3: Configure the host network manager for the ip, this located in virtualbox > host network manager
+### Step 3: Configure the host network manager for the ip, this located in virtualbox > host network manager
 
-## Step 4: Initialize the vagrant script to create the 3 nodes and 1 workstation, copy the given scipts found below or copy in my repository
+### Step 4: Initialize the vagrant script to create the 3 nodes and 1 workstation, copy the given scipts found below or copy in my repository
 
 ```
 Vagrant.configure("2") do |config|
@@ -51,7 +51,7 @@ Vagrant.configure("2") do |config|
     end
 end
 ```
-## Step 5: Start the vagrant that we create a script by using the command:
+### Step 5: Start the vagrant that we create a script by using the command:
 
 ```
 Shell Command
@@ -59,7 +59,7 @@ $ vagrant up
 
 ```
 
-## Step 6: Access the workstion name "Control" vm
+### Step 6: Access the workstion name "Control" vm
 
 ```
 Shell Command
@@ -67,7 +67,7 @@ $ vagrant ssh control
 
 ```
 
-## Step 7: access the mount folder of vagrant
+### Step 7: access the mount folder of vagrant
 ```
 Shell Command
 $ cd /vagrant
@@ -75,14 +75,14 @@ $ cd /vagrant
 ```
 Note: Option for us there will be no coding in your part ;)
 
-## Step 7.1: Copy the host file given to the workstation
+### Step 7.1: Copy the host file given to the workstation
 ```
 Shell Command
 $ sudo cp hosts /etc/hosts
 
 ```
 
-## Step 8: add a ip for each node and workstation for us to have a nameresolution
+### Step 8: add a ip for each node and workstation for us to have a nameresolution
 
 ```
 Shell Command
@@ -90,22 +90,22 @@ $ sudo vim /etc/hosts
 
 ```
 
-## Step 9:  Add the following in the host file
+### Step 9:  Add the following in the host file
 ```
 192.168.56.10 control
 192.168.56.11 node1
 192.168.56.12 node2
 192.168.56.13 node3
 ```
-## Step 10: Try to connect server using ssh
+### Step 10: Try to connect server using ssh
 ```
 Shell Command
 
 $ ssh vagrant@node1
 
-``
+```
 
-## Step 11: Make a copy of ssh key to our servers, 
+### Step 11: Make a copy of ssh key to our servers, 
 In making a keygen in our workstation the procedure in allowing all with no passphrase
 
 ```
@@ -113,9 +113,9 @@ Shell Command
 
 $ ssh-keygen
 
-``
+```
 
-## Step 12: Copy the generate key to the server and test it ping using access e.g ssh vagrant@node1
+### Step 12: Copy the generate key to the server and test it ping using access e.g ssh vagrant@node1
 
 ```
 Shell Command
@@ -123,7 +123,7 @@ Shell Command
 $ ssh-copy-id node1 && ssh-copy-id node2 && ssh-copy-id node3
 
 ```
-## Step 13: Create a ansible inventory and playbook in /vagrant
+### Step 13: Create a ansible inventory and playbook in /vagrant
 
 Note: Here are the link for the documentation of making basic inventory https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
 
@@ -134,11 +134,11 @@ $ touch inventory
 $ touch playbook.yml
 
 ```
-## Step 14: Dockerize sample python apps
+### Step 14: Dockerize sample python apps
 
 I have a separate tutorial in dockerize the python apps
 
-Step 15: Update the inventory in thru this belown
+### Step 15: Update the inventory in thru this belown
 ```
 [control]
 control
