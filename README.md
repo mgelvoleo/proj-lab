@@ -134,3 +134,29 @@ $ touch inventory
 $ touch playbook.yml
 
 ``
+Step 14: Dockerize sample python apps
+
+I have a separate tutorial in dockerize the python apps
+
+Step 15: Update the inventory in thru this belown
+```
+[control]
+control
+
+
+[nodes]
+node1
+node2
+node3
+
+
+
+[manager]
+node1
+
+[worker]
+node2
+node3
+
+```       
+
