@@ -190,7 +190,31 @@ $  docker node ls
 
 ```
 
+Step 20: Pull the images from the dockerhub of the python apps to swarm Note: You should be in the properpery folder to execute the command
 
+```
+Shell Command
+
+$  docker stack deploy --compose-file docker-compose.yml myapp
+
+
+
+```
+
+
+Step 21: View the successfull deploy of images in the swarm
+```
+Shell Command
+
+$  docker stack ls
+$  docker stack services myapp
+```
+Step 22: Scale the services that we have by typing:
+```
+Shell Command
+$ docker service scale  myapp_helloworld=3
+$ docker service ps myapp_web
+```
 
 
 
