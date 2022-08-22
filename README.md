@@ -1,6 +1,6 @@
 # Project Provisioning 3 nodes
 
-Step 1: Install the vagrant
+## Step 1: Install the vagrant
 
 Step 2: Install the virtualbox
 
