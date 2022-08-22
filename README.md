@@ -159,4 +159,45 @@ node2
 node3
 
 ```       
+Step 16: Clone or fork the ansible swarm playbook 
+
+```
+Shell Command
+
+$ git clone https://github.com/mgelvoleo/ansible-swarm-playbook
+
+```
+
+
+Step 17: Open the swarm.yml and replace in the playbook that has a eth0 to eth1
+
+Step 18: Run the playbook
+
+```
+Shell Command
+
+$ ansible-playbook -i inventory -K swarm.yml
+
+```
+
+Step 19: Access the each node with ssh and type the command to check if the swarm is working
+
+```
+Shell Command
+
+$  ssh node1
+$  docker node ls
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
