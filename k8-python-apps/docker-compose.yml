@@ -1,6 +1,6 @@
 version: "3.3"
 services:
   web:
-    image: devopsjourney1/myflaskimg:1 
+    image: mgelvoleo/dockerswarm101:1.0
     ports:
       - "5000:5000"
